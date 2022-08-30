@@ -1,3 +1,6 @@
+# :warning: This is under development, if you want to try/test please use dev branch! - bugs/errors/crashes extremly possible :warning:
+
+
 # crouton: Chromium OS Universal Chroot Environment
 
 crouton is a set of scripts that bundle up into an easy-to-use,
