@@ -6,3 +6,4 @@ nacl_sdk/
 /test/run
 /releases/
 /.vscode/
+/crouton.build/
