@@ -17,20 +17,20 @@ cat /etc/apt/sources.list
 
 # Update the package list.
 # Ignore failures, as most are due to bad PPAs and are not critical.
-echo -e '\033[1mUpdate the package list...'
+echo "Update the package list..."
 apt-get -y -qq update || true
 
 ### Install xbindkeys
-echo -e '\033[1minstalling xbindkeys...'
+echo "installing xbindkeys..."
 apt -y -qq install xbindkeys xbindkeys-config
 
 # Remove bullseye sources to exclude conflicts with future install steps
-echo -e '\033[1mRemove bullseye sources...'
+echo "Remove bullseye sources..."
 sh -c "head -n -2 /etc/apt/sources.list > /etc/apt/sources.list.tmp"
 rm /etc/apt/sources.list
 mv /etc/apt/sources.list.tmp /etc/apt/sources.list
 
-echo -e '\033[1mUpdate the package list...'
+echo "Update the package list..."
 apt-get -y -qq update
 
 #echo -e '\033[1mInstall kali core meta package...'
