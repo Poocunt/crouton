@@ -64,26 +64,26 @@ EOF
     fi
 
     # Only update sources.list if MIRROR is specified
-#    if [ -n "$MIRROR" -a "$MIRROR" != 'unspecified' ]; then
-#        cat > /etc/apt/sources.list <<EOF
-#deb $MIRROR $RELEASE main non-free contrib
-#deb-src $MIRROR $RELEASE main non-free contrib
-#EOF
+    if [ -n "$MIRROR" -a "$MIRROR" != 'unspecified' ]; then
+        cat > /etc/apt/sources.list <<EOF
+deb $MIRROR $RELEASE main non-free contrib
+deb-src $MIRROR $RELEASE main non-free contrib
+EOF
         # Some derivatives also have security updates
-#        if release -le buster -eq kali; then
-#            cat >> /etc/apt/sources.list <<EOF
-#deb $MIRROR2 $RELEASE/updates main non-free contrib
-#deb-src $MIRROR2 $RELEASE/updates main non-free contrib
-#EOF
-#        fi
-#    fi
+        if release -le buster -eq kali; then
+            cat >> /etc/apt/sources.list <<EOF
+deb $MIRROR2 $RELEASE/updates main non-free contrib
+deb-src $MIRROR2 $RELEASE/updates main non-free contrib
+EOF
+        fi
+    fi
 
     # Update the package list.
     # Ignore failures, as most are due to bad PPAs and are not critical.
-#    apt-get -y update || true
+    apt-get -y update || true
 
-#    echo 'Ensuring system is up-to-date...' 1>&2
-#    apt-get -y dist-upgrade
+    echo 'Ensuring system is up-to-date...' 1>&2
+    apt-get -y dist-upgrade
 fi
 
 # On release upgrade, keyboard-configuration might be reconfigured.
