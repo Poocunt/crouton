@@ -69,13 +69,6 @@ EOF
 deb $MIRROR $RELEASE main non-free contrib
 deb-src $MIRROR $RELEASE main non-free contrib
 EOF
-        # Some derivatives also have security updates
-        if release -le buster -eq kali-rolling; then
-            cat >> /etc/apt/sources.list <<EOF
-deb $MIRROR2 $RELEASE/updates main non-free contrib
-deb-src $MIRROR2 $RELEASE/updates main non-free contrib
-EOF
-        fi
     fi
 
     # Update the package list.
