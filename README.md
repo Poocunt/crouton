@@ -26,15 +26,6 @@ This means that:
 
 ## But first...
 
-Why i do this? Because i want to use Kali Linux and don't get it be installed with 
-the default crouton installer. Also the development is not realy active, so i will
-try to make needed changes, to get kali linux (rolling) running again.
-
-To test and try, use the dev branch please, the testing branch is under active unsecure
-untested code for contibutors. An pull to master will be denied, because this is the origin
-clone of repo and many ppl surf via google to github and so they don't get confused or buggy/unsecure 
-code.
-
 :warning: **Steps to install crouton have changed!**  :warning:
 
 Due to improved security within Chromium OS ([yay!](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/security/noexec_shell_scripts.md)),
