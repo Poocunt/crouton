@@ -4,6 +4,11 @@
 # found in the LICENSE file.
 REQUIRES='core'
 DESCRIPTION='Fixes xbindkeys error during kali linux setup.'
+. "${TARGETSDIR:="$PWD"}/common"
+
+if [ "${TARGETNOINSTALL:-c}" = 'c' ] && release -lt jessie -eq kali; then
+    echo 'debug'
+fi
 
 # Adding debian bullseye repo to get xbindkeys installed
 echo -e '\033[1mAdding debian bullseye repo to sources.list...'
