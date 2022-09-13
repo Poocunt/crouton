@@ -1,5 +1,5 @@
 #### About
-This release contains an fix of the **cras compile error** during the installation of crouton. This fix is replaces the whole target.
+This release contains an fix of the **cras compile error** during the installation of crouton [#4804](https://github.com/dnschneid/crouton/issues/4804).  This fix is replaces the whole target.
 
 #### What does the fix do?
 The fix changes the **CFLAGS** to pass the compile error durring setup of crouton (which prevents crouton to create the chroot).
